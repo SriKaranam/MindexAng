@@ -1,0 +1,9 @@
+<div class="container">
+
+	<mat-list class="employee-list">
+		<mat-list-item class="employee-wrapper" *ngFor="let emp of employees">
+			<app-employee class="employee-item" [employee]="emp" (edit)="handleEmployeeEditRequest($event);" (delete)="handleEmployeeDeleteRequest($event);" style="width: 100%; display: block;"></app-employee>
+		</mat-list-item>
+	</mat-list>
+
+</div>

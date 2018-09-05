@@ -1,0 +1,58 @@
+<div class="employee">
+  <div class="employee-section">
+    <div class="employee-info-primary">
+        <span class="name">
+          <span>{{employee.firstName}}</span>
+          <span>&nbsp;</span>
+          <span>{{employee.lastName}}</span>
+        </span>
+        <span class="position">
+          <span>{{employee.position}}</span>
+        </span>
+    </div>
+    <div class="employee-info-secondary">
+        <span class="id">
+          <span>Employee ID: </span>
+          <span>{{employee.id}}</span>
+        </span>
+        <span class="reportee-count">
+          <span>&nbsp;</span>
+          <span>Direct Reports: </span>
+          <span>{{employee.reportsCount}}</span>
+        </span>
+    </div>
+  </div>
+  <div class="reportee-section" *ngIf="employee.directReports">
+    <header class="head">Reports:</header>
+    <table class="table table-striped">
+      <tbody>
+        <tr *ngFor="let reportee of employee.directReportsEmployees">
+          <td style="vertical-align: middle;" *ngIf="reportee">
+            <div>
+              <span class="name">
+                <span>{{reportee.firstName}}</span>
+                <span>&nbsp;</span>
+                <span>{{reportee.lastName}}</span>
+              </span>
+              <span class="position">
+                <span>,</span>
+                <span>&nbsp;</span>
+                <span>{{reportee.position}}</span>
+              </span>
+            </div>
+          </td>
+          <td align="right" width="5" *ngIf="reportee">
+              <button mat-icon-button (click)="editEmployee(reportee)">
+                <mat-icon aria-label="Example icon-button with a edit icon">edit</mat-icon>
+              </button>
+          </td>
+          <td align="right" width="5" *ngIf="reportee">
+              <button mat-icon-button (click)="deleteEmployee(reportee)">
+                <mat-icon aria-label="Example icon-button with a delete icon">delete</mat-icon>
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

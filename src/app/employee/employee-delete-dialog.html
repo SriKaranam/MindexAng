@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Delete Employee</h2>
+<mat-dialog-content class="mat-typography">  
+  <p>
+    <span>Permanently Delete Employee</span>
+    <span>&nbsp;</span>
+    <span>{{employee.firstName}}</span>
+    <span>&nbsp;</span>
+    <span>{{employee.lastName}}</span>
+    <span>&nbsp;</span>
+    <span>?</span>
+  </p>  
+  <p>
+    <span>This cannot be undone.</span>
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="start">
+  <button mat-button (click)="onYesClick();">OK</button>
+  <button mat-button (click)="onNoClick();" [mat-dialog-close]="true" cdkFocusInitial>Cancel</button>
+</mat-dialog-actions>

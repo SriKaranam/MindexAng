@@ -1,0 +1,62 @@
+.employee-item {
+	width: 100%;
+	display: block;
+}
+
+.employee {
+
+	padding: 20px;
+	border: 1px solid #111111;
+	box-shadow: 0px 1px 3px 0px #333333;
+	display: block;
+	width: 100%;
+}
+
+.employee-section {
+	padding: 10px;
+	border-bottom: 1px solid #111111;
+}
+
+.employee-info-primary {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.employee-info-primary {
+
+
+}
+
+.employee-info-primary .name {
+}
+.employee-info-primary .position {
+
+}
+.employee-info-primary .position::before {
+	content: ", ";
+}
+
+.employee-info-secondary {
+
+	font-size: 14px;
+	font-weight: 600;
+	color: #888888;
+	margin-bottom: 5px;
+}
+
+.reportee-count {
+
+}
+
+.reportee-count::before {
+	content: " ";
+}
+
+.reportee-section {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.reportee-section .head {
+	margin-bottom: 10px;
+}
